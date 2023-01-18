@@ -1,7 +1,7 @@
 import React from "react";
 import { TbSquarePlus, TbSquareMinus } from "react-icons/tb";
 
-function Guitar() {
+function Guitar({ guitar, onAdd, onRemove }) {
   return (
     <div>
       <img
@@ -10,13 +10,15 @@ function Guitar() {
         alt="Guitar 1"
       ></img>
       <div className="guitar-body">
-        <h3 className="guitar-name">Guitar name</h3>
-        <p className="guitar-description">
-          This is first guitar in the inventory!
-        </p>
+        <h3 className="guitar-name">{guitar.name}</h3>
+        <p className="guitar-description">{guitar.description}</p>
       </div>
-      <TbSquarePlus />
-      <TbSquareMinus />
+      <button className="btn" onClick={() => onAdd(guitar.name)}>
+        <TbSquarePlus />
+      </button>
+      <button className="btn" onClick={() => onRemove(guitar.name)}>
+        <TbSquareMinus />
+      </button>
     </div>
   );
 }
