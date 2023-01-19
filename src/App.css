@@ -55,11 +55,11 @@
   flex-direction: row;
   background-color: black;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom-width: 5px;
   border-bottom-color: black;
   align-items: center;
-  min-height: 40px;
-  padding-left: 25px;
+  min-height: 50px;
+  padding-left: 15px;
   font-size: large;
 }
 
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .guitar-num {
@@ -76,15 +76,15 @@
   color: black;
   border-radius: 5px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
 }
 
 .guitar-name {
-  margin: 1%;
+  margin: 2%;
 }
 
 .guitar-description {
@@ -93,57 +93,57 @@
   overflow: hidden;
   height: 75%;
   float: left;
-  margin: 2%;
+  margin: 1%;
 }
 
 .guitar {
-  margin: 35px;
+  margin: 25px;
   border-style: solid;
   border-width: 2px;
   border-color: rgb(211, 211, 211);
   display: flex;
-  width: 90%;
+  width: 95%;
   height: 350px;
 }
 
 .btnRemove {
   background-color: darkred;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 3px;
-  border-radius: 3px;
-  border-width: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 2px;
+  border-radius: 2px;
+  border-width: 2px;
 }
 
 .btnAdd {
   background-color: darkblue;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 3px;
-  border-radius: 3px;
-  border-width: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 2px;
+  border-radius: 2px;
+  border-width: 2px;
 }
 
 .btnSubmit {
   background-color: darkblue;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 3px;
-  border-radius: 3px;
-  border-width: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 2px;
+  border-radius: 2px;
+  border-width: 2px;
 }
 
 .body {
-  margin: 10px;
+  margin: 15px;
 }
 
 .txtStringSize {

@@ -44,41 +44,36 @@ function App() {
     },
   ]);
 
-
-
   function refreshFnc() {
     let newGuitars = guitars.filter((g) => g.inBus === true);
     setAddedGuitars(newGuitars);
   }
 
   function setStringSize(id, stringSize) {
-    guitars.forEach((guitar) => {
-      if (guitar.id === id) {
-        guitar.stringSize = stringSize;
-      }
-    });
+    guitars
+      .filter((guitar) => guitar.id === id)
+      .forEach((guitar) => (guitar.stringSize = stringSize));
   }
 
   function addGuitar(guitar) {
-    guitars.forEach((g) => {
-      if (g.id === guitar.id) {
-        if (g.inBus === false) {
-          setBusNumber(busNumber + 1);
-        }
+    guitars
+      .filter((g) => g.id === guitar.id)
+      .filter((g) => g.inBus === false)
+      .forEach((g) => {
+        setBusNumber(busNumber + 1);
         g.inBus = true;
-      }
-    });
+      });
 
     refreshFnc();
   }
 
   function removeGuitar(guitar) {
-    guitars.forEach((g) => {
-      if (g.id === guitar.id) {
+    guitars
+      .filter((g) => g.id === guitar.id)
+      .forEach((g) => {
         g.inBus = false;
         setBusNumber(busNumber - 1);
-      }
-    });
+      });
     refreshFnc();
   }
 
@@ -105,7 +100,10 @@ function App() {
           element={<Bus guitars={addedGuitars} onRemove={removeGuitar} />}
         ></Route>
       </Routes>
-      <Covid setCovidCasesDeath={setCovidCasesDeath} covidCasesDeath={covidCasesDeath} />
+      <Covid
+        setCovidCasesDeath={setCovidCasesDeath}
+        covidCasesDeath={covidCasesDeath}
+      />
       <Footer />
     </BrowserRouter>
   );
