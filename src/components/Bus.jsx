@@ -1,21 +1,20 @@
 import React from "react";
 import Guitar from "./Guitar";
 
-function Guitars({ guitars, onAdd, onRemove, onSet }) {
+function Bus({ guitars, onRemove }) {
   return (
     <div>
+      <h1>These are guitars packed into your bus: </h1>
       {guitars.map((guitar) => (
         <Guitar
           guitar={guitar}
           key={guitar.id}
-          onAdd={onAdd}
+          inBus={true}
           onRemove={onRemove}
-          onSet={onSet}
-          inBus={false}
         />
       ))}
     </div>
   );
 }
 
-export default Guitars;
+export default Bus;
