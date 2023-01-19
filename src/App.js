@@ -4,9 +4,12 @@ import NavBar from "./components/NavBar";
 import Bus from "./components/Bus";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Covid from "./components/Covid";
 
 function App() {
   const [busNumber, setBusNumber] = useState(0);
+  const [covidCasesDeath, setCovidCasesDeath] = useState(0);
   const [addedGuitars, setAddedGuitars] = useState([]);
   const [guitars] = useState([
     {
@@ -40,6 +43,8 @@ function App() {
       inBus: false,
     },
   ]);
+
+
 
   function refreshFnc() {
     let newGuitars = guitars.filter((g) => g.inBus === true);
@@ -100,6 +105,8 @@ function App() {
           element={<Bus guitars={addedGuitars} onRemove={removeGuitar} />}
         ></Route>
       </Routes>
+      <Covid setCovidCasesDeath={setCovidCasesDeath} covidCasesDeath={covidCasesDeath} />
+      <Footer />
     </BrowserRouter>
   );
 }

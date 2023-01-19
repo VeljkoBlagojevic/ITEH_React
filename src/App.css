@@ -37,6 +37,19 @@
   }
 }
 
+.footer {
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  align-items: center;
+  padding-left: 25px;
+  font-size: large;
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+
 .navBar {
   display: flex;
   flex-direction: row;
@@ -70,13 +83,17 @@
   margin-left: 5px;
 }
 
+.guitar-name {
+  margin: 1%;
+}
 
 .guitar-description {
   position: relative;
   text-align: left;
   overflow: hidden;
-  height: 100%;
+  height: 75%;
   float: left;
+  margin: 2%;
 }
 
 .guitar {
@@ -86,7 +103,7 @@
   border-color: rgb(211, 211, 211);
   display: flex;
   width: 90%;
-  height: 220px;
+  height: 350px;
 }
 
 .btnRemove {
@@ -170,3 +187,15 @@
   transform: translateX(-6px);
   background: blue;
 }
+
+.covid {
+  display: block;
+  text-align: center;
+}
+
+.deaths {
+  font-size: 100px;
+  color: darkred;
+  display: block;
+}
+

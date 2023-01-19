@@ -1,5 +1,4 @@
 import React from "react";
-import { TbSquarePlus, TbSquareMinus } from "react-icons/tb";
 import { useState } from "react";
 
 function Guitar({ guitar, onAdd, onRemove, onSet, inBus }) {
@@ -31,7 +30,7 @@ function Guitar({ guitar, onAdd, onRemove, onSet, inBus }) {
         </>
       ) : (
         <div className="stringProps">
-          <label for="string-sizes">Choose a string size:</label>
+          <label htmlFor="string-sizes">Choose a string size:</label>
           <select name="string-sizes" id="string-sizes" onChange={set}>
             <option value="11" onChange={set}>11</option>
             <option value="12" onChange={set}>12</option>
